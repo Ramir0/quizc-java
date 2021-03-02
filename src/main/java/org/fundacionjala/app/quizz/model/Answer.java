@@ -12,6 +12,10 @@ public class Answer {
         this.answers = answers;
     }
 
+    public Question getQuestion(){
+        return question;
+    }
+
     @Override
     public String toString() {
         return question.getTitle() + ": " + Arrays.toString(answers.toArray());

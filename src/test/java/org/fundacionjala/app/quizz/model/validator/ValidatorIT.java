@@ -18,4 +18,14 @@ public class ValidatorIT {
         Assert.assertEquals(DateValidator.class, dateValidator.getClass());
         Assert.assertTrue(errors.isEmpty());
     }
+
+    @Test
+    public void testTextValidator() {
+        List<String> errors = new ArrayList<>();
+        Validator validator = ValidatorType.UPPERCASE.getValidator();
+
+        validator.validate("HOLA", null, errors);
+        Assert.assertEquals(UpperCaseValidator.class, validator.getClass());
+        Assert.assertTrue(errors.isEmpty());
+    }
 }
