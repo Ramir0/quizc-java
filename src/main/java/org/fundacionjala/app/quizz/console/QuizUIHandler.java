@@ -33,7 +33,10 @@ public class QuizUIHandler {
 		System.out.println("=============================================");
 
 		for (Answer answer : quizAnswers.getAnswers()) {
-			System.out.println(answer);
+			System.out.println("Answer title: " + answer.getQuestion().getTitle());
+			System.out.println("Question Code: " + answer.getQuestion().getType().getCode());
+			System.out.println("Question Name: " + answer.getQuestion().getType().getName());
+			System.out.println(answer.toString());
 		}
 
 		System.out.println("=============================================");
